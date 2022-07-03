@@ -15,120 +15,50 @@
 <!DOCTYPE html>
 <html>
 
-    <center><h2 class="ml4"><br></br>Old Talks Archive
- <span class="letters letters-1">Student</span>
-  <span class="letters letters-2">Topology</span>
-  <span class="letters letters-3">And</span>
-  <span class="letters letters-4">Geometry</span>
-  <span class="letters letters-5">Seminars</span>
+  <center>
+
+<h2 class="ml15"> 
+  <span class="word">Student</span>
+  <span class="word">Topology</span>
+  <span class="word">&</span>
+  <span class="word">Geometry</span>
+  <span class="word">Seminars</span></h2> 
   
-</h2>
+  
+  <h1>Old Talks Archive</h1>
+  </center>
 
-</center>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js">
-</script>
-
-
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 <style>
-.ml4 {
-  position: relative;
-  font-weight: 900;
-  font-size: 4.5em;
-}
-.ml4 .letters {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  top: 0.3em;
+.ml15 {
+  font-weight: 800;
   
-  right: 0;
-  opacity: 0; 
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
 }
 </style>
 
-
 <script>
-
-var ml4 = {};
-ml4.opacityIn = [0,1];
-ml4.scaleIn = [0.2, 1];
-ml4.scaleOut = 3;
-ml4.durationIn = 800;
-ml4.durationOut = 600;
-ml4.delay = 500;
-
 anime.timeline({loop: true})
   .add({
-    targets: '.ml4 .letters-1',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
+    targets: '.ml15 .word',
+    scale: [14,1],
+    opacity: [0,1],
+    easing: "easeOutCirc",
+    duration: 800,
+    delay: (el, i) => 800 * i
   }).add({
-    targets: '.ml4 .letters-1',
+    targets: '.ml15',
     opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-2',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-2',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-3',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-3',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  })
-  .add({
-    targets: '.ml4 .letters-4',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-4',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  })
-  .add({
-    targets: '.ml4 .letters-5',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-5',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  })
-  .add({
-    targets: '.ml4',
-    opacity: 0,
-    duration: 500,
-    delay: 500
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
   });
 </script>
     
