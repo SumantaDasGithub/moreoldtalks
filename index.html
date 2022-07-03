@@ -1,0 +1,597 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* defaults */
+/* =============================================== */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  
+  --light: hsl(0, 0%, 100%);
+  --background: linear-gradient(to right bottom, hsl(236, 50%, 50%), hsl(195, 50%, 50%));
+
+  
+
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
+
+  min-height: 100vh;
+  background: linear-gradient(to bottom, hsl(236, 50%, 98%), hsl(236, 50%, 94%));
+}
+
+a,
+a:link {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+/* modal */
+/* =============================================== */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: hsla(0, 0%, 40%, .6);
+}
+
+/* using :target */
+.modal-container:target {
+  display: flex;
+}
+
+.modal {
+  width: 80%;
+  padding: 4rem 2rem;
+  border-radius: .8rem;
+
+  color: var(--light);
+  background: var(--background);
+  box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, 0.3);
+  position: relative;
+
+  overflow: hidden;
+}
+
+.modal__details {
+  text-align: center;
+
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid hsla(0, 0%, 100%, .4);
+}
+
+.modal__title {
+  font-size: 3.2rem;
+}
+
+.modal__description {
+  margin-top: 2rem;
+
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.modal__text {
+  padding: 0 4rem;
+  margin-bottom: 4rem;
+
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.modal__text::before {
+  content: '';
+
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid hsla(0, 0%, 100%, .2);
+  border-radius: 100rem;
+
+  pointer-events: none;
+}
+
+.modal__btn {
+  padding: 1rem 1.6rem;
+  border: 1px solid hsla(0, 0%, 100%, .4);
+  border-radius: 100rem;
+
+  color: inherit;
+  background: transparent;
+  font-size: 1.4rem;
+  font-family: inherit;
+  letter-spacing: .2rem;
+
+  transition: .2s;
+  cursor: pointer;
+}
+
+.modal__btn:hover,
+.modal__btn:focus {
+  border-color: hsla(0, 0%, 100%, .6);
+  transform: translateY(-.2rem);
+}
+
+/* links */
+/* =============================================== */
+
+.link-1 {
+  
+}
+
+.link-1:hover,
+.link-1:focus {
+}
+.link-2 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid hsla(0, 0%, 100%, .4);
+  border-radius: 100rem;
+
+  color: inherit;
+  font-size: 2.2rem;
+
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .2s;
+}
+
+.link-2::before {
+  content: '×';
+
+  transform: translateY(-.1rem);
+}
+
+.link-2:hover,
+.link-2:focus {
+  border-color: hsla(0, 0%, 100%, .6);
+  transform: translateY(-.2rem);
+}
+
+/* Second Version Link */
+/* =============================================== */
+.second-version-link,
+.second-version-link:link {
+  color: hsl(236, 50%, 50%);
+  padding: .8rem 1.6rem .8rem .2rem;
+  border-bottom: 2px solid hsl(236, 50%, 50%);
+
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
+
+.second-version-link::after {
+  content: '\2197';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  font-size: .9em;
+}
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 1.6rem;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css">
+       {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        outline: none;
+      }
+      body {
+        
+        
+        align-items: center;
+        height: 1vh;
+        
+      }
+  
+      h5 {
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typewriter 2.5s steps(13) infinite alternate,
+          blink 100ms steps(13) infinite normal;
+        border-right: 0px solid black;
+      }
+      @keyframes typewriter {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink {
+        from {
+          border-color: black;
+        }
+        to {
+          border-color: transparent;
+        }
+      }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+ <style>
+        .blink {
+            animation: blinker 1.5s linear infinite;
+            color: black;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+
+ 
+
+
+
+
+
+
+
+<center>
+<p> <table cellpadding="15" cellspacing="5" border="5" width="90%" table bgcolor="#ffffcc" table bordercolor="#000000"  }>
+
+
+<td align="left"> <b><center>Date</ceter></b> </td>
+<td> <b> <center>Speaker </center> </b>
+</td>
+<td> <b> <center> Title and Abstract  <p class="blink"> <TT> <h5>Click On Title To See Abstract   </h5> </TT> </p> </center></b>
+</td>
+<td> <b> <center>Keywords</center> </b>
+</td>
+
+
+<tr>
+
+
+
+
+ <td align="left" td bgcolor="#ffffcc"><center> September 01  </center></td>
+<td><center>Kartick Ghosh</center>
+</td>
+<td> <center> 
+<a href="#modal-opened1" class="link-1" id="modal-closed">Vortex-type equations on compact Riemann surfaces</a>
+
+<div class="modal-container" id="modal-opened1">
+  <div class="modal">
+
+    <div class="modal__details">
+      <h1 class="modal__title">Modal Title</h1>
+      <p class="modal__description">Sentence that will tell user what this modal is for or something.</p>
+    </div>
+
+    <p class="modal__text">Let $\Sigma$ be a compact Riemann surface, and $L$ be a holomorphic line bundle over it. Let $\phi \in H^{0}(\Sigma,L)$  be not identically zero and $\Sigma$ be endowed with a metric whose associated $(1,1)$-form is $\omega_{\Sigma}$. We are interested in the following family of equations (for a Hermitian metric $h_{\alpha,t}$ on $L$) that depend on the parameters $\alpha\geq 0$ and  $0\leq t \leq 1$. </p>
+  $$i\Theta_{h_{\alpha,t}}=(d-\lvert\phi\rvert_{h_{\alpha,t}}^{2})\frac{e_{\alpha}u_{\alpha}^{1-t}\omega_{\Sigma}+itk_{\alpha}\nabla^{(1,0)}\phi\wedge\nabla^{(0,1)}\phi^{*}}{a_{\alpha}+b_{\alpha}t\lvert\phi\rvert_{h_{\alpha,t}}^{2}-c_{\alpha}t^{2}\lvert\phi\rvert_{h_{\alpha,t}}^{4}},$$
+ </p>
+
+    <button class="modal__btn">Date 12the September </button>
+
+    <a href="#modal-closed" class="link-2"></a>
+
+  </div>
+</div>
+
+
+         </center>
+</td>
+<td><center>sdgfsdjgfgf</center></td>
+
+</tr>
+
+
+
+<tr>
+
+<td align="left" td bgcolor="#ffffcc"><center> September 02 </center></td>
+<td> <center> Gobinda Sau </center>
+</td>
+<td> <center> 
+<a href="#modal-opened2" class="link-1" id="modal-closed">Let's Calcultae $\int\limits_0^1 f(x)\ \mathrm dx$</a>
+
+<div class="modal-container" id="modal-opened2">
+  <div class="modal">
+
+    <div class="modal__details">
+      <h1 class="modal__title">Modal Title</h1>
+      <p class="modal__description">Sentence that will tell user what this modal is for or something.</p>
+    </div>
+
+    <p class="modal__text">In mathematics, an integral assigns numbers to functions in a way that describes displacement, area, volume, and other concepts that arise by combining infinitesimal data. The process of finding integrals is called integration. Along with differentiation, integration is a fundamental, essential operation of calculus,[a] and serves as a tool to solve problems in mathematics and physics involving the area of an arbitrary shape, the length of a curve, and the volume of a solid, among others.
+
+</p>
+
+    <button class="modal__btn">Button &rarr;</button>
+
+    <a href="#modal-closed" class="link-2"></a>
+
+  </div>
+</div>
+
+         </center>
+</td>
+<td>dhsdhffherfherer</td>
+</tr>
+
+
+
+
+
+ <tr>
+
+<td align="left" td bgcolor="#ffffcc"><center> September 03  </center></td>
+<td> <center>Sumanta Das</center>
+</td>
+<td> <center>
+<a href="#modal-opened3" class="link-1" id="modal-closed">Refinement of Kneser-Milnor prime decomposition theorem after Perelman</a>
+
+<div class="modal-container" id="modal-opened3">
+  <div class="modal">
+
+    <div class="modal__details">
+      <h1 class="modal__title">Modal Title</h1>
+      <p class="modal__description">Sentence that will tell user what this modal is for or something.</p>
+    </div>
+
+    <p class="modal__text">Kneser-Milnor prime decomposition theorem says that any closed orientable 3-manifold can be written uniquely as a finite connected sum of orientable prime 3-manifolds. After Perelman’s positive answer to the $3$-dimensional Poincaré conjecture, we have some extra pieces of information about these summands, namely, some of these summands have contractible universal covers, and $\Bbb S^3$ cover some others, and the rest are homeomorphic to $\Bbb S^2\times \Bbb S^1$. </p>
+
+    <button class="modal__btn">Button &rarr;</button>
+
+    <a href="#modal-closed" class="link-2"></a>
+
+  </div>
+</div>
+ </center>
+</td>
+<td>dhsdhffherfherer</td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+<td align="left" td bgcolor="#ffffcc"><center> September 01 (9PM) </center></td>
+<td><center> hfjerhfjer</center>
+</td>
+<td> <center> 
+<a href="#modal-opened" class="link-1" id="modal-closed">Vortex-type equations on compact Riemann surfaces</a>
+
+<div class="modal-container" id="modal-opened">
+  <div class="modal">
+
+    <div class="modal__details">
+      <h1 class="modal__title">Modal Title</h1>
+      <p class="modal__description">Sentence that will tell user what this modal is for or something.</p>
+    </div>
+
+    <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.</p>
+
+    <button class="modal__btn">Button &rarr;</button>
+
+    <a href="#modal-closed" class="link-2"></a>
+
+  </div>
+</div>
+
+         </center>
+</td>
+<td><center>sdgfsdjgfgf</center></td>
+
+</tr>
+
+ <td align="left">September 22 (4PM) </td>
+<td> 
+</td>
+<td> 
+<center> 
+<a href="#modal-opened" class="link-1" id="modal-closed">Vortex-type equations on compact Riemann surfaces</a>
+
+<div class="modal-container" id="modal-opened">
+  <div class="modal">
+
+    <div class="modal__details">
+      <h1 class="modal__title">Modal Title</h1>
+      <p class="modal__description">Sentence that will tell user what this modal is for or something.</p>
+    </div>
+
+    <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex dicta maiores libero minus obcaecati iste optio, eius labore repellendus.</p>
+
+    <button class="modal__btn">Button &rarr;</button>
+
+    <a href="#modal-closed" class="link-2"></a>
+
+  </div>
+</div>
+
+         </center>
+</td>
+</tr>
+
+ <td align="left">September 29 (9PM) </td>
+<td>fdkhkdhdkhdkhkghgh
+</td>
+<td> 
+</td>
+<td> dfgdfjgjf
+</td>
+</tr>
+
+
+
+ <td align="left">October 06 (9PM) </td>
+<td> u2wyedhwwerhwehwerhf
+</td>
+<td> 
+</td>
+</tr>
+
+ <td align="left"> October 13 </td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+ <td align="left">October 20 </td>
+<td> hufoerueruoergujrt
+</td>
+<td> 
+</td>
+</tr>
+
+
+ <td align="left">October 27 (9PM) </td>
+<td> djfojjfgjegj
+</td>
+<td> 
+</td>
+</tr>
+
+
+ <td align="left">November 10 (4PM) </td>
+<td> jjdfgfrfh
+</td>
+<td> 
+</td>
+</tr>
+
+
+ <td align="left">November 17 (9PM) </td>
+<td> jrtgorurturtuyrty
+</td>
+<td> 
+</td>
+</tr>
+
+ <td align="left"> November 24 (9PM) </td>
+<td> ertrutrurtrttr
+</td>
+<td> 
+</td>
+</tr>
+
+<td align="left"> December 01 (4PM) </td>
+<td> ierrjfjwekwlw
+</td>
+<td> 
+</td>
+</tr>
+
+
+      
+
+
+
+
+
+<script>
+// Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+</script>
